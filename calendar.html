@@ -14,8 +14,8 @@
     <script>
         $(function () {
 
-            var available = ["2020-11-18-1", "2020-11-19-2", "2020-11-20-1","2020-11-4-2", "2020-11-5-2", "2020-11-6-1"]; //資料庫給有空的時間
-            var booked = ["2020-11-25-1", "2020-11-26-2", "2020-11-27-1"]; //資料庫給已被預訂的時間
+            var available = ["2020年11月18日-1", "2020年11月19日-2", "2020年11月20日-1"]; //資料庫給有空的時間
+            var booked = ["2020年11月25日-1", "2020年11月26日-2", "2020年11月27日-1"]; //資料庫給已被預訂的時間
 
             //必要的資料
             //今天的年 月 日 ；本月的總天數；本月第一天是周幾？？？
@@ -56,7 +56,7 @@
                     $(".dateList").append(`
                     <li>
                         <input type="button" value="${i}" class="nobuttonstyly"><br>
-                        <input type="button" value="午" class="nobuttonstyly period" id="${year}-${month + 1}-${i}-1"><input type="button" value="晚" class="nobuttonstyly period" id="${year}-${month + 1}-${i}-2">
+                        <input type="button" value="午" class="nobuttonstyly period" id="${year}年${month + 1}月${i}日-1"><input type="button" value="晚" class="nobuttonstyly period" id="${year}年${month + 1}月${i}日-2">
                     </li>`)
                 }
 

@@ -2951,17 +2951,12 @@ table td {
 
 .overlay {
   position: absolute;
-  bottom: -255px;
-  right: -310px;
+  bottom: -88%;
+  right: -88%;
   height: 100%;
   width: 100%;
-  opacity: 0;
-  transition: .3s ease;
 }
 
-.single-best-receipe-area:hover .overlay {
-  opacity: 0.5;
-}
 
 #heart :active {
   opacity: 1;
@@ -2970,12 +2965,17 @@ table td {
   position: relative;
 }
 
-.heart1 {
-  color: #b6b6b6;
+.heart1 , .fa-2x{
+  color: #000000;
+  opacity: 0.3;
 }
-
-.heart2 {
-  color: red;
+.fa-2x:hover{
+  color: #db3939;  
+  opacity: 1;
+}
+.heartclicked{
+  color: #db3939;  
+  opacity: 1;
 }
 
 .carousel_pic {
