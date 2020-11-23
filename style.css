@@ -1508,7 +1508,7 @@ input:focus, textarea:focus {
 }
 
 .ingredients .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-  background-color: #ffa943;
+  background-color: #ffa943 !important;
 }
 
 /* :: 16.0 Footer Area CSS */
@@ -2051,6 +2051,17 @@ input:focus, textarea:focus {
   border-bottom: 3px solid #ffa943;
 }
 
+.img-style5 {
+  background-size: cover;
+  background-position: center;
+}
+.img-style6{  
+  object-fit: cover;
+  height: 415px;
+  overflow: hidden;
+  padding-left: 5px;
+}
+
 .img-style3:hover {
   transform: scale(1.05);
 }
@@ -2285,6 +2296,7 @@ table td {
   top: 50%;
   left: 0;
   color: #b9b9b9;
+  z-index: 9999;
 }
 
 .prev:hover {
@@ -2296,6 +2308,7 @@ table td {
   top: 50%;
   right: 0;
   color: #b9b9b9;
+  z-index: 9999;
 }
 
 .next:hover {
@@ -2353,6 +2366,53 @@ table td {
   text-shadow: 3px 3px 3px #414141;
 }
 
+.popstyle {
+  background-color: #fff;
+  width: 300px;
+  height: 150px;
+  text-align: center;
+  border: 1px solid #dbdbdb;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  font-size: 28px;
+  line-height: 60px;
+  box-shadow: 0px 0px 10px #414141;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -75px;
+  margin-left: -150px;
+  z-index: 9999;
+}
+
+.dropdown li a:hover {
+  color: #ffa943 !important;
+}
+
+.product_td {
+  padding: 10px;
+  vertical-align: text-top;
+}
+
+.table-bottom {
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.table-border {
+  border: 1px solid #e9e9e9;
+  min-width: 100px;
+}
+
+.pd1px {
+  padding-left: 1px;
+}
+
+.newitem {
+  color: #ffa943;
+  padding-left: 20px;
+}
 /*Cindy*/
 
 /*James*/
@@ -2380,6 +2440,12 @@ table td {
 .table_td2 {
   text-align: right;
   padding-left: 20px;
+}
+.table_td3{
+  text-align: left;
+  min-width: 150px;
+  width: 150px;
+  height: 150px;
 }
 
 .input1 {
@@ -2955,8 +3021,8 @@ table td {
   right: -88%;
   height: 100%;
   width: 100%;
+  z-index: 9999;
 }
-
 
 #heart :active {
   opacity: 1;
@@ -2965,16 +3031,18 @@ table td {
   position: relative;
 }
 
-.heart1 , .fa-2x{
+.heart1, .fa-2x {
   color: #000000;
   opacity: 0.3;
 }
-.fa-2x:hover{
-  color: #db3939;  
+
+.fa-2x:hover {
+  color: #db3939;
   opacity: 1;
 }
-.heartclicked{
-  color: #db3939;  
+
+.heartclicked {
+  color: #db3939;
   opacity: 1;
 }
 
@@ -2987,14 +3055,6 @@ table td {
   -webkit-transform: translateX(-15%);
 }
 
-.product_detail {
-  border-collapse: separate;
-  border-spacing: 40px 35px;
-}
-
-.product_detail td {
-  width: 350px;
-}
 
 .span_font {
   font-size: 30px;
@@ -3009,14 +3069,12 @@ table td {
   text-align: left;
   height: 47px;
   border: none;
-  background-color: #ffffff;
   border-radius: 0;
   padding: 0 30px;
   font-size: 20px;
   line-height: 45px;
   font-weight: 600;
-  margin-bottom: 60px;
-  border-left: 3px solid #1c8314;
+  border-left: 3px solid #c16315;
 }
 
 #rate {
@@ -3035,6 +3093,7 @@ table td {
   border-collapse: separate;
   align-self: center;
   margin-bottom: 20px;
+  border-radius:10px;
 }
 
 .tbrecord_tb, .tbrecord_tb a {
@@ -3054,19 +3113,8 @@ table td {
   width: 80%;
 }
 
-.product_detail img {
-  width: 200px;
-  height: 200px;
-  overflow: hidden;
-}
-
-.product_detail {
-  font-size: 15px;
-  font-weight: 400;
+.product_detail tr td{
+  padding: 10px 30px;
   width: 100%;
-  margin: auto;
-  height: 200px;
-  background-color: #b6b6b6;
 }
-
 /*james*/

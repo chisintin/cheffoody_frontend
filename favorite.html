@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>搜尋結果</title>
+    <title>我的最愛</title>
     <link rel="icon" href="img/core-img/favicon.ico">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -39,13 +39,14 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul>
-                                    <li><a href="#">首頁</a></li>
+                                    <li><a href="index.html">首頁</a></li>
                                     <li><a href="#">關於我們</a></li>
                                     <li><a href="#">服務項目</a></li>
                                     <li class="active"><a href="#">會員中心</a>
                                         <ul class="dropdown">
-                                            <li class="active"><a href="#">會員中心</a></li>
-                                            <li><a href="#">交易紀錄</a></li>
+                                            <li><a href="membercenter.html">會員中心</a></li>
+                                            <li class="active"><a href="favorite.html">我的最愛</a></li>
+                                            <li><a href="transaction.html">交易紀錄</a></li>
                                             <li><a href="buypoint.html">儲值點數</a></li>
                                         </ul>
                                     </li>
@@ -69,79 +70,8 @@
             <div class="row h-100 align-items-center">
                 <div class="col-12">
                     <div class="breadcumb-text text-center">
-                        <h2>搜尋結果</h2>
+                        <h2>我的最愛</h2>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="receipe-post-area section-padding-80-0">
-
-            <!-- Receipe Post Search -->
-            <div class="container receipe-post-search">
-
-                <div class="row">
-                    <div class="col-12 col-lg-2">
-                        <select name="select1" id="select1">
-                            <option disabled selected>風格</option>
-                            <option value="1">中式</option>
-                            <option value="2">法式</option>
-                            <option value="3">日式</option>
-                            <option value="4">義式</option>
-                        </select>
-                    </div>
-                    <div class="col-12 col-lg-2">
-                        <select name="select1" id="select2">
-                            <option disabled selected>服務選項</option>
-                            <option value="1">私廚到你家</option>
-                            <option value="2">線上課程</option>
-                            <option value="3">線下課程</option>
-
-                        </select>
-                    </div>
-                    <div class="col-12 col-lg-2 ">
-                        <input id="meeting" type="date" value="" class="dtpicker"
-                            style="padding-left: 12px; padding-right: 12px;" />
-                    </div>
-                    <div class="col-12 col-lg-2">
-                        <select name="select1" id="select2">
-                            <option value="1" disabled selected>時段</option>
-                            <option value="1">午餐</option>
-                            <option value="1">晚餐</option>
-
-                        </select>
-                    </div>
-                    <div class="col-12 col-lg-2">
-                        <select name="select1" id="select2">
-                            <option value="1" disabled selected>地點</option>
-                            <option value="1">台北市</option>
-                            <option value="1">新北市</option>
-                            <option value="1">台中市</option>
-                            <option value="1">高雄市</option>
-                        </select>
-                    </div>
-
-                    <div class=" col-lg-2 ">
-                        <button type="submit" class="btn delicious-btn" data-toggle="modal" data-target="#modal1"
-                            style="width: 100%;">Search</button>
-                        <!--彈跳視窗-->
-
-
-                    </div>
-                </div>
-                <div class="mt-3 mb-3 text-center"><span style="color: #525252; font-weight: bold;">OR</span></div>
-
-                <div class="row">
-                    <div class="col-lg-10">
-                        <input type="text" name="searchstring" class="form-control" placeholder="請輸入商品名稱"
-                            style="margin-bottom: 20px;">
-                    </div>
-                    <div class="col-lg-2">
-                        <button type="submit" class="btn delicious-btn" data-toggle="modal" data-target="#modal1"
-                            style="width: 100%;">Search</button>
-                    </div>
-
                 </div>
             </div>
         </div>
@@ -156,7 +86,7 @@
                             <div class="picautosize">
                                 <div class="img-style4" style="background-image: url(img/bg-img/bg2.jpg);"></div>
                                 <div class="overlay">
-                                    <a href="#"><i class="fa fa-heart fa-2x" id="heart1"></i></a>
+                                    <a href="#"><i class="fa fa-heart fa-2x heartclicked" id="heart1"></i></a>
                                 </div>
                             </div>
 
@@ -199,7 +129,7 @@
                             <div class="picautosize">
                                 <div class="img-style4" style="background-image: url(img/bg-img/breadcumb2.jpg);"></div>
                                 <div class="overlay">
-                                    <a href="#"><i class="fa fa-heart fa-2x" id="heart2"></i></a>
+                                    <a href="#"><i class="fa fa-heart fa-2x heartclicked" id="heart2"></i></a>
                                 </div>
                             </div>
 
@@ -242,7 +172,7 @@
                             <div class="picautosize">
                                 <div class="img-style4" style="background-image: url(img/bg-img/bg3.jpg);"></div>
                                 <div class="overlay">
-                                    <a href="#"><i class="fa fa-heart fa-2x" id="heart3"></i></a>
+                                    <a href="#"><i class="fa fa-heart fa-2x heartclicked" id="heart3"></i></a>
                                 </div>
                             </div>
 
@@ -286,7 +216,7 @@
                             <div class="picautosize">
                                 <div class="img-style4" style="background-image: url(img/bg-img/bg7.jpg);"></div>
                                 <div class="overlay">
-                                    <a href="#"><i class="fa fa-heart fa-2x" id="heart4"></i></a>
+                                    <a href="#"><i class="fa fa-heart fa-2x heartclicked" id="heart4"></i></a>
                                 </div>
                             </div>
 
@@ -329,7 +259,7 @@
                             <div class="picautosize">
                                 <div class="img-style4" style="background-image: url(img/bg-img/bg5.jpg);"></div>
                                 <div class="overlay">
-                                    <a href="#"><i class="fa fa-heart fa-2x" id="heart5"></i></a>
+                                    <a href="#"><i class="fa fa-heart fa-2x heartclicked" id="heart5"></i></a>
                                 </div>
                             </div>
 
@@ -419,11 +349,6 @@
     <!-- Active js -->
     <script src="js/active.js"></script>
 
-    <script>
-        if ($('[type="date"]').prop('type') != 'date') {
-            $('[type="date"]').datepicker();
-        }
-    </script>
     <script>
 
         $('.fa-heart').click(function () {

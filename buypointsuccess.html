@@ -15,7 +15,7 @@
             t-=1;
             document.getElementById('seconds').innerHTML=t;
             if(t==0){
-                location.href='login.html'; //之後交易紀錄好要改連結
+                location.href='transaction.html'; 
             }
             setTimeout("reciprocal()",1000);
            
@@ -58,7 +58,7 @@
                                     <li><a href="#">會員中心</a>
                                         <ul class="dropdown">
                                             <li><a href="#">會員中心</a></li>
-                                            <li><a href="#">交易紀錄</a></li>
+                                            <li><a href="transaction.html">交易紀錄</a></li>
                                             <li><a href="buypoint.html">儲值點數</a></li>
                                         </ul>
                                     </li>
@@ -95,8 +95,8 @@
             <div class="row">
                 <div class="col-12 text-center mt-5">
                     <span>將於<span id="seconds"></span>秒後為您跳轉至交易紀錄頁面。</span><br><br>
-                    <span>或者自行點擊<a href="#" class="single-contact-information">
-                        <h6>交易紀錄</h6><!--交易紀錄好要改連結-->
+                    <span>或者自行點擊<a href="transaction.html" class="single-contact-information">
+                        <h6>交易紀錄</h6>
                     </a></span>
                 </div>
             </div>
