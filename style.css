@@ -349,7 +349,7 @@ input:focus, textarea:focus {
   right: 20px;
 }
 
-.nice-select .list {
+.nice-select .list,.nice-select option {
   background-color: #ffffff;
   border: none;
   border-radius: 0;
@@ -1901,10 +1901,10 @@ input:focus, textarea:focus {
   color: #9b9b9b;
   border: none;
   border-left: 3px solid #ffa943;
-  padding: 0 15px;
+  padding: 0 25px;
   height: 50px;
   line-height: 50px;
-  margin: 0 2px;
+  margin: 0 5px;
   border-radius: 0;
   font-size: 14px;
   font-weight: 600;
@@ -2254,17 +2254,17 @@ table td {
 }
 
 .period:hover {
-  background-color: #ffa943;
+  background-color: #5ab496;
   color: #fff;
 }
 
 .periodclicked {
-  background-color: #ffa943 !important;
+  background-color: #5ab496 !important;
   color: #fff;
 }
 
 .booked {
-  background-color: #c16315;
+  background-color: #ffa943;
   color: #fff;
 }
 
@@ -2412,6 +2412,10 @@ table td {
 .newitem {
   color: #ffa943;
   padding-left: 20px;
+}
+.emailnoclick:link{
+  font-weight:normal;
+  cursor: context-menu;
 }
 /*Cindy*/
 

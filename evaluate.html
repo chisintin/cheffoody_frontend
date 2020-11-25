@@ -143,12 +143,7 @@
                                                         <div>
                                                             <h5 class="ml-3 mt-2">私廚名稱</h5>
                                                         </div>
-                                                        <div class="ratings mb-1 ml-3">
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
-                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                        <div class="ratings mb-1 ml-3 starlocation">
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -233,6 +228,20 @@
     <script src="js/plugins/plugins.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
+    <script>        
+        $(function () {
+            var starvalue = 3;
+
+            for (var i = 1; i <= starvalue; i++) {
+                    $(".starlocation").append("<i class='fa fa-star' aria-hidden='true'></i>");
+                }
+            var nullstar =5-starvalue;
+            for (var i = 1; i <= nullstar; i++) {
+                    $(".starlocation").append("<i class='fa fa-star-o' aria-hidden='true'></i>");
+                }
+            
+        });
+    </script>
 </body>
 
 </html>
