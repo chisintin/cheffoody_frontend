@@ -109,7 +109,6 @@
                                 <tr>
                                     <td>
                                         <select name="select1" id="select1" class="nice-select">
-                                            <option>請選擇日期</option>
                                         </select>
                                     </td>
                                 </tr>
@@ -389,16 +388,54 @@
     </script>
     <script>
         var price = 500;
+        var hopedate = '2020/11/26-1';
         var okdates = ['2020/11/25-1', '2020/11/25-2', '2020/11/26-1'];
+        var period = 0;
 
         $(function () {
-            $('.totalprice').append(`=NT${price}`);
+            $('.totalprice').append(`=NT$${price}`);
+            $("#select2 option").remove();
 
             for (const date of okdates) {
-                var lookdate = date.substring(0, date.length - 2)
-                $('#select1').append(`<option id="${lookdate}">${lookdate}</option>`);
-                
+                var lookdate = date.substring(0, date.length - 2);
+                var lookhopedate = hopedate.substring(0, date.length - 2);
+
+
+                if (lookdate == lookhopedate) {
+                    console.log(1);
+
+                    
+                    period = date.substr(11, 1);                    
+
+                    $('#select1').append(`<option id="${lookdate}" selected>${lookdate}</option>`);
+
+                    if (period == 1) {
+                        $('#select2').append(`<option id="period1" value="1">午餐</option>`);
+                    }
+                    else if (period == 2) {
+                        $('#select2').append(`<option id="period2" value="2">晚餐</option>`);
+                    }
+                    else {
+                    }                    
+
+                }
+                else {
+                    $('#select1').append(`<option id="${lookdate}">${lookdate}</option>`);
+                }
+
             }
+            hopeperiod = hopedate.substr(11, 1);
+            if($('#period1').val() == hopeperiod){
+                $('#period1').attr('selected','selected');
+            }
+            else if($('#period2').val() == hopeperiod){
+                $('#period2').attr('selected','selected');
+            }
+            else{
+
+            }
+
+
 
             //刪除重複日期
             var seen = {};
@@ -411,11 +448,27 @@
                     seen[txt] = true;
                 }
             })
+
+            //刪除重複時段
+            var seen2 = {};
+            $('#select2').children().each(function () {
+                var txt = $(this).clone().wrap('<select>').parent().html();
+                if (seen2[txt]) {
+                    $(this).remove();
+                }
+                else {
+                    seen2[txt] = true;
+                }
+            })
+
+
+
+
         });
 
         $("#select1").change(function () {
             var choosedate = $(this).val();
-            var period = 0;
+
             $("#select2 option").remove();
 
             for (const date of okdates) {
