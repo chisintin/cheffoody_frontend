@@ -10,20 +10,22 @@
     <link rel="icon" href="img/core-img/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="css/lightbox.css" />
+
     <style>
-        .dialog-a {
-            font-size: 16px;
-            line-height: 28px;
+        .closebtn {
+            color: #b6b6b6;
+            font-size: 26px;
+            position: absolute;
+            right: 10px;
+            top: 0;
+            z-index: 8999;
         }
 
-        .dialog-a:hover {
-            color: #ffa943;
-            font-size: 16px;
-            line-height: 28px;
+        .closebtn:hover {
+            color: #8d8d8d;
         }
     </style>
-
-
 </head>
 
 <body>
@@ -99,16 +101,14 @@
                 <form action="#" method="post">
                     <div class="row">
                         <div class="col-12 col-lg-7">
-                            <div class="slick">
-                                <div>
-                                    <img src="img/bg-img/bg6.jpg" class="img-style6">
-                                </div>
-                                <div>
-                                    <img src="img/bg-img/bg4.jpg" class="img-style6">
-                                </div>
-                                <div>
-                                    <img src="img/bg-img/bg7.jpg" class="img-style6">
-                                </div>
+                            <div class="slick links blueimp-gallery blueimp-gallery-controls" id="links"
+                                aria-label="image gallery" aria-modal="true" role="dialog">
+                                <a href="img/bg-img/bg6.jpg" data-lightbox="group1"><img src="img/bg-img/bg6.jpg" class="img-style6"></a>
+
+                                <a href="img/bg-img/bg4.jpg" data-lightbox="group1"><img src="img/bg-img/bg4.jpg" class="img-style6"></a>
+
+                                <a href="img/bg-img/bg7.jpg" data-lightbox="group1"><img src="img/bg-img/bg7.jpg" class="img-style6"></a>
+
                             </div>
                         </div>
 
@@ -346,23 +346,6 @@
         </div>
     </div>
 
-    <div class="bigpic-bg" style="display: none;">
-        <div class="slick2">
-            <div>
-                <img src="img/bg-img/test1.jpg" class="img-style7">
-            </div>
-            <div>
-                <img src="img/bg-img/test2.jpg" class="img-style7">
-            </div>
-            <div>
-                <img src="img/bg-img/bg7.jpg" class="img-style7">
-            </div>
-        </div>
-
-    </div>
-
-
-
 
     <!--彈跳視窗-->
     <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -380,6 +363,12 @@
             </div>
         </div>
     </div>
+
+    <div>
+    </div>
+
+
+
 
 
 
@@ -413,8 +402,10 @@
     <footer></footer>
     <!-- ##### All Javascript Files ##### -->
     <!-- jQuery-2.2.4 js -->
-    <!-- <script src="js/jquery/jquery-2.2.4.min.js"></script> -->
-    <script src="js/jquery-3.5.1.min.js"></script>
+
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="js/lightbox.js"></script>
+
     <!-- Popper js -->
     <script src="js/bootstrap/popper.min.js"></script>
     <!-- Bootstrap js -->
@@ -549,13 +540,6 @@
                 }
 
             }
-
-
-
-
-
-
-
         })
 
 
@@ -574,6 +558,15 @@
         $('.delicious-btn').click(function () {
             $('.delicious-btn').attr('type', 'button');
         });
+
+        // $('.closebtn').click(function(){
+        //     $('.bigpic-bg').hide(300);
+        // }); 
+
+        // $('.img-style6').click(function(){
+        //     $('.bigpic-bg').show();
+
+        // });
 
 
     </script>
