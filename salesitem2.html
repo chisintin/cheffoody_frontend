@@ -10,18 +10,6 @@
     <link rel="icon" href="img/core-img/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <style>
-        .dialog-a {
-            font-size: 16px;
-            line-height: 28px;
-        }
-
-        .dialog-a:hover {
-            color: #ffa943;
-            font-size: 16px;
-            line-height: 28px;
-        }
-    </style>
 
 
 </head>
@@ -95,7 +83,7 @@
 
         <!-- Receipe Post Search -->
         <div class="receipe-post-search mb-80">
-            <div class="container">
+            <div class="container" style="position: relative;">
                 <form action="#" method="post">
                     <div class="row">
                         <div class="col-12 col-lg-7">
@@ -120,13 +108,35 @@
 
                                 <tr>
                                     <td>
-                                        <select name="select1" id="select1" class="nice-select">
-                                        </select>
+                                        <input id="meeting" type="date" value="" class="dtpicker" />
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <select name="select2" id="select2" class="nice-select">
+                                        <select name="service-area" id="service-area" class="form-control-option" required>
+                                            <option disabled selected>時段</option>
+                                            <option value="1">午餐</option>
+                                            <option value="2">晚餐</option>
+                                            <option value="1">午餐</option>
+                                            <option value="2">晚餐</option>
+                                            <option value="1">午餐</option>
+                                            <option value="2">晚餐</option>
+                                            <option value="1">午餐</option>
+                                            <option value="2">晚餐</option>
+                                            <option value="1">午餐</option>
+                                            <option value="2">晚餐</option>
+                                            <option value="1">午餐</option>
+                                            <option value="2">晚餐</option>
+                                            <option value="1">午餐</option>
+                                            <option value="2">晚餐</option>
+                                            <option value="1">午餐</option>
+                                            <option value="2">晚餐</option>
+                                            <option value="1">午餐</option>
+                                            <option value="2">晚餐</option>
+                                            <option value="1">午餐</option>
+                                            <option value="2">晚餐</option>
+                                            <option value="1">午餐</option>
+                                            <option value="2">晚餐</option>
                                         </select>
                                     </td>
                                 </tr>
@@ -140,8 +150,7 @@
                                     <td class="text-right pb-4">
                                         <span class="span_font totalprice" style="vertical-align: middle;">
                                         </span>
-                                        <button type="submit" class="btn delicious-btn ml-3" data-toggle="modal"
-                                            data-target="#modal1">購買</button>
+                                        <button type="submit" class="btn delicious-btn ml-3">購買</button>
                                     </td>
                                 </tr>
                             </table>
@@ -154,7 +163,7 @@
 
     <!-- ##### pic and form end ##### -->
 
-    <div class="receipe-post-search mb-80">
+    <div class="receipe-post-search mb-80"style="z-index: -100;position:relative;">
         <div class="container">
             <form action="#" method="post">
                 <div class="row">
@@ -363,27 +372,6 @@
 
 
 
-
-    <!--彈跳視窗-->
-    <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="col-lg-12 alert1 mb-2">
-                        <i class="fa fa-exclamation-circle waitstatus"
-                            style="font-size: 28px;line-height: 60px;"></i><br>
-                        <h5 class="waitstatus">請先登入會員方可購買</h5>
-                        <a href="login.html" class="dialog-a">立即登入</a>｜<a href="register.html" class="dialog-a">前往註冊</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
     <!-- ##### Footer Area Start ##### -->
     <footer class="footer-area bg-light">
         <div class="container h-100">
@@ -413,8 +401,8 @@
     <footer></footer>
     <!-- ##### All Javascript Files ##### -->
     <!-- jQuery-2.2.4 js -->
-    <!-- <script src="js/jquery/jquery-2.2.4.min.js"></script> -->
-    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- <script src="js/jquery-3.5.1.min.js"></script> -->
     <!-- Popper js -->
     <script src="js/bootstrap/popper.min.js"></script>
     <!-- Bootstrap js -->
@@ -422,16 +410,17 @@
     <!-- All Plugins js -->
     <script src="js/plugins/plugins.js"></script>
     <!-- Active js -->
+    <script src="js/active.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
     <script>
 
 
         $('.slick').slick({
-            dots: true,
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 3000,
+            dotsClass: 'slick-dots slick-active',
             prevArrow: "<i class='fa fa-chevron-left prev ml-4' aria-hidden='true'></i>",
             nextArrow: "<i class='fa fa-chevron-right next mr-4' aria-hidden='true'></i>"
         });
@@ -455,101 +444,7 @@
 
 
             $('.totalprice').append(`=NT$${price}`);
-            $("#select2 option").remove();
-
-            for (const date of okdates) {
-                var lookdate = date.substring(0, date.length - 2);
-                var lookhopedate = hopedate.substring(0, date.length - 2);
-
-
-                if (lookdate == lookhopedate) {
-                    console.log(1);
-
-
-                    period = date.substr(11, 1);
-
-                    $('#select1').append(`<option id="${lookdate}" selected>${lookdate}</option>`);
-
-                    if (period == 1) {
-                        $('#select2').append(`<option id="period1" value="1">午餐</option>`);
-                    }
-                    else if (period == 2) {
-                        $('#select2').append(`<option id="period2" value="2">晚餐</option>`);
-                    }
-                    else {
-                    }
-
-                }
-                else {
-                    $('#select1').append(`<option id="${lookdate}">${lookdate}</option>`);
-                }
-
-            }
-            hopeperiod = hopedate.substr(11, 1);
-            if ($('#period1').val() == hopeperiod) {
-                $('#period1').attr('selected', 'selected');
-            }
-            else if ($('#period2').val() == hopeperiod) {
-                $('#period2').attr('selected', 'selected');
-            }
-            else {
-
-            }
-
-
-
-            //刪除重複日期
-            var seen = {};
-            $('#select1').children().each(function () {
-                var txt = $(this).clone().wrap('<select>').parent().html();
-                if (seen[txt]) {
-                    $(this).remove();
-                }
-                else {
-                    seen[txt] = true;
-                }
-            })
-
-            //刪除重複時段
-            var seen2 = {};
-            $('#select2').children().each(function () {
-                var txt = $(this).clone().wrap('<select>').parent().html();
-                if (seen2[txt]) {
-                    $(this).remove();
-                }
-                else {
-                    seen2[txt] = true;
-                }
-            })
-
-
-
-
-        });
-
-        $("#select1").change(function () {
-            var choosedate = $(this).val();
-
-            $("#select2 option").remove();
-
-            for (const date of okdates) {
-                var checkdate = date.substr(0, 10);
-                if (checkdate == choosedate) {
-                    period = date.substr(11, 1);
-
-                    if (period == 1) {
-                        $('#select2').append(`<option>午餐</option>`);
-
-                    }
-                    else if (period == 2) {
-                        $('#select2').append(`<option>晚餐</option>`);
-                    }
-                    else {
-                    }
-                }
-
-            }
-
+ 
 
 
 
@@ -566,16 +461,12 @@
             var totalprice = numpeople * price;
             $('.totalprice').html(`=NT$${totalprice}`);
         }
-
-
     </script>
     <script>
+        if ($('[type="date"]').prop('type') != 'date') {
 
-        $('.delicious-btn').click(function () {
-            $('.delicious-btn').attr('type', 'button');
-        });
-
-
+            $('[type="date"]').datepicker();
+        }
     </script>
 
 </body>

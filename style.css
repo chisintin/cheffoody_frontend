@@ -349,7 +349,7 @@ input:focus, textarea:focus {
   right: 20px;
 }
 
-.nice-select .list,.nice-select option {
+.nice-select .list {
   background-color: #ffffff;
   border: none;
   border-radius: 0;
@@ -2055,11 +2055,31 @@ input:focus, textarea:focus {
   background-size: cover;
   background-position: center;
 }
-.img-style6{  
+
+.img-style6 {
   object-fit: cover;
   height: 415px;
   overflow: hidden;
   padding-left: 5px;
+}
+
+.img-style7 {
+  object-fit: cover;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+
+.bigpic-bg {
+  background-color: #000000cc;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  z-index: 9988;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .img-style3:hover {
@@ -2296,7 +2316,7 @@ table td {
   top: 50%;
   left: 0;
   color: #b9b9b9;
-  z-index: 9999;
+  z-index: 8888;
 }
 
 .prev:hover {
@@ -2308,7 +2328,7 @@ table td {
   top: 50%;
   right: 0;
   color: #b9b9b9;
-  z-index: 9999;
+  z-index: 8888;
 }
 
 .next:hover {
@@ -2387,6 +2407,8 @@ table td {
   z-index: 9999;
 }
 
+
+
 .dropdown li a:hover {
   color: #ffa943 !important;
 }
@@ -2413,10 +2435,44 @@ table td {
   color: #ffa943;
   padding-left: 20px;
 }
-.emailnoclick:link{
-  font-weight:normal;
+
+.emailnoclick:link {
+  font-weight: normal;
   cursor: context-menu;
 }
+.slick-dots{
+  position: absolute; 
+  left: 0; 
+  right: 0; 
+  display: flex; 
+  justify-content: center;
+
+}
+
+.slick-dots button{
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color:#e9e9e9 ;
+  border-radius:50%;
+  width: 10px;
+  height: 10px;
+  border: 0px;
+  z-index: 8888;  
+  float: left;
+  text-align: center;
+  margin-right: 10px;
+
+}
+.slick-dots button:hover,.slick-dots button:active{
+  background-color:#ffa943 ;
+
+}
+.slick-list{
+  position: relative;
+}
+
+
 /*Cindy*/
 
 /*James*/
@@ -2443,9 +2499,9 @@ table td {
 
 .table_td2 {
   text-align: right;
-  
 }
-.table_td3{
+
+.table_td3 {
   text-align: left;
   min-width: 150px;
   width: 150px;
@@ -3059,7 +3115,6 @@ table td {
   -webkit-transform: translateX(-15%);
 }
 
-
 .span_font {
   font-size: 30px;
 }
@@ -3097,7 +3152,7 @@ table td {
   border-collapse: separate;
   align-self: center;
   margin-bottom: 20px;
-  border-radius:10px;
+  border-radius: 10px;
 }
 
 .tbrecord_tb, .tbrecord_tb a {
@@ -3117,8 +3172,9 @@ table td {
   width: 80%;
 }
 
-.product_detail tr td{
+.product_detail tr td {
   padding: 10px 30px;
   width: 100%;
 }
+
 /*james*/

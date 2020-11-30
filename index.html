@@ -127,18 +127,18 @@
                             </div>
                         </div>
                         <div class="searchfont mt-5">Or Enter Key Words！</div>
-
-                        <div class="row">
-                            <div class="col-lg-10">
-                                <input type="text" name="searchstring" class="form-control" placeholder="請輸入商品名稱"
-                                    style="margin-bottom: 20px;">
+                        <form action="chefcenter.html" method="post">
+                            <div class="row">
+                                <div class="col-lg-10">
+                                    <input type="text" name="searchstring"id="searchstring" class="form-control" placeholder="請輸入商品名稱"
+                                        style="margin-bottom: 20px;">
+                                </div>
+                                <div class="col-lg-2">
+                                    <button type="submit" class="btn delicious-btn" data-toggle="modal"
+                                        data-target="#modal1" style="width: 100%;" id="searchbtn">Search</button>
+                                </div>
                             </div>
-                            <div class="col-lg-2">
-                                <button type="submit" class="btn delicious-btn" data-toggle="modal"
-                                    data-target="#modal1" style="width: 100%;">Search</button>
-                            </div>
-
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -553,6 +553,21 @@
             ],
             prevArrow: "<i class='fa fa-chevron-left prev' aria-hidden='true'></i>",
             nextArrow: "<i class='fa fa-chevron-right next' aria-hidden='true'></i>"
+        });
+
+        
+
+        $('#searchbtn').click(function(){
+            var searchstring = document.getElementById('searchstring').value;
+            if(searchstring == ""){
+                console.log(123);
+                $('#searchbtn').attr("disabled", true);
+            }
+
+        });
+        $('#searchstring').focus(function(){
+            console.log(456);
+                $('#searchbtn').attr("disabled", false);
         });
 
     </script>
