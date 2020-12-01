@@ -101,14 +101,17 @@
                 <form action="#" method="post">
                     <div class="row">
                         <div class="col-12 col-lg-7">
-                            <div class="slick links blueimp-gallery blueimp-gallery-controls" id="links"
-                                aria-label="image gallery" aria-modal="true" role="dialog">
-                                <a href="img/bg-img/bg6.jpg" data-lightbox="group1"><img src="img/bg-img/bg6.jpg" class="img-style6"></a>
-
-                                <a href="img/bg-img/bg4.jpg" data-lightbox="group1"><img src="img/bg-img/bg4.jpg" class="img-style6"></a>
-
-                                <a href="img/bg-img/bg7.jpg" data-lightbox="group1"><img src="img/bg-img/bg7.jpg" class="img-style6"></a>
-
+                            <div class="slick salesitempic">
+                                <div class="img-style6">
+                                    <a href="img/bg-img/breadcumb5.jpg" data-lightbox="group1"><img src="img/bg-img/breadcumb5.jpg" ></a>                                    
+                                </div>
+                                
+                                <div class="img-style6">
+                                    <a href="img/bg-img/test2.jpg" data-lightbox="group1"><img src="img/bg-img/test2.jpg" ></a>                                    
+                                </div>                                
+                                <div class="img-style6">
+                                    <a href="img/bg-img/bg7.jpg" data-lightbox="group1"><img src="img/bg-img/bg7.jpg"></a>                                    
+                                </div>                          
                             </div>
                         </div>
 
@@ -124,12 +127,12 @@
                                         </select>
                                     </td>
                                 </tr>
-                                <tr>
+                                <!-- <tr>
                                     <td>
                                         <select name="select2" id="select2" class="nice-select">
                                         </select>
                                     </td>
-                                </tr>
+                                </tr> -->
                                 <tr>
                                     <td>
                                         <input type="number" min="1" value="1" placeholder="人數" name="numpeople"
@@ -446,7 +449,7 @@
 
 
             $('.totalprice').append(`=NT$${price}`);
-            $("#select2 option").remove();
+            // $("#select2 option").remove();
 
             for (const date of okdates) {
                 var lookdate = date.substring(0, date.length - 2);
@@ -461,14 +464,14 @@
 
                     $('#select1').append(`<option id="${lookdate}" selected>${lookdate}</option>`);
 
-                    if (period == 1) {
-                        $('#select2').append(`<option id="period1" value="1">午餐</option>`);
-                    }
-                    else if (period == 2) {
-                        $('#select2').append(`<option id="period2" value="2">晚餐</option>`);
-                    }
-                    else {
-                    }
+                    // if (period == 1) {
+                    //     $('#select2').append(`<option id="period1" value="1">午餐</option>`);
+                    // }
+                    // else if (period == 2) {
+                    //     $('#select2').append(`<option id="period2" value="2">晚餐</option>`);
+                    // }
+                    // else {
+                    // }
 
                 }
                 else {
@@ -502,45 +505,45 @@
             })
 
             //刪除重複時段
-            var seen2 = {};
-            $('#select2').children().each(function () {
-                var txt = $(this).clone().wrap('<select>').parent().html();
-                if (seen2[txt]) {
-                    $(this).remove();
-                }
-                else {
-                    seen2[txt] = true;
-                }
-            })
+            // var seen2 = {};
+            // $('#select2').children().each(function () {
+            //     var txt = $(this).clone().wrap('<select>').parent().html();
+            //     if (seen2[txt]) {
+            //         $(this).remove();
+            //     }
+            //     else {
+            //         seen2[txt] = true;
+            //     }
+            // })
 
 
 
 
         });
 
-        $("#select1").change(function () {
-            var choosedate = $(this).val();
+        // $("#select1").change(function () {
+        //     var choosedate = $(this).val();
 
-            $("#select2 option").remove();
+        //     $("#select2 option").remove();
 
-            for (const date of okdates) {
-                var checkdate = date.substr(0, 10);
-                if (checkdate == choosedate) {
-                    period = date.substr(11, 1);
+        //     for (const date of okdates) {
+        //         var checkdate = date.substr(0, 10);
+        //         if (checkdate == choosedate) {
+        //             period = date.substr(11, 1);
 
-                    if (period == 1) {
-                        $('#select2').append(`<option>午餐</option>`);
+        //             if (period == 1) {
+        //                 $('#select2').append(`<option>午餐</option>`);
 
-                    }
-                    else if (period == 2) {
-                        $('#select2').append(`<option>晚餐</option>`);
-                    }
-                    else {
-                    }
-                }
+        //             }
+        //             else if (period == 2) {
+        //                 $('#select2').append(`<option>晚餐</option>`);
+        //             }
+        //             else {
+        //             }
+        //         }
 
-            }
-        })
+        //     }
+        // })
 
 
         function totalprice() {
